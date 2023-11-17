@@ -54,7 +54,8 @@ body {
     .buttons {
         display: flex;
         justify-content: center;
-        margin-top: 40px;
+        align-items: center;
+        height: 10vh;
         gap: 40px;
         color: $font-color;
 
@@ -70,12 +71,10 @@ body {
         }
     }
 
-
-
     .upgrades {
         display: none;
         overflow-y: auto;
-        height: 100vh;
+        height: 90vh;
         width: 80%;
         margin: auto;
 
@@ -109,7 +108,35 @@ body {
     }
 
     .worlds {
+        overflow-y: auto;
+        height: 90vh;
         display: none;
+        width: 80%;
+        margin: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        div {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 30px 20px;
+            color: $font-color;
+
+            button {
+                border-radius: 50px;
+                border: none;
+                padding: 5px;
+                background-color: #ffffff;
+
+                &:hover {
+                    background-color: #d4cfcf;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     .worlds.active {

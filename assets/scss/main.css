@@ -49,7 +49,8 @@ body {
 .burgerContent .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  align-items: center;
+  height: 10vh;
   gap: 40px;
   color: #a1a1a1;
 }
@@ -65,7 +66,7 @@ body {
 .burgerContent .upgrades {
   display: none;
   overflow-y: auto;
-  height: 100vh;
+  height: 90vh;
   width: 80%;
   margin: auto;
 }
@@ -93,7 +94,31 @@ body {
   display: block;
 }
 .burgerContent .worlds {
+  overflow-y: auto;
+  height: 90vh;
   display: none;
+  width: 80%;
+  margin: auto;
+}
+.burgerContent .worlds::-webkit-scrollbar {
+  display: none;
+}
+.burgerContent .worlds div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 30px 20px;
+  color: #a1a1a1;
+}
+.burgerContent .worlds div button {
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  background-color: #ffffff;
+}
+.burgerContent .worlds div button:hover {
+  background-color: #d4cfcf;
+  cursor: pointer;
 }
 .burgerContent .worlds.active {
   display: block;
