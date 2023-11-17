@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+.burgermenu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+.burgermenu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: #a1a1a1;
+  transition: 400ms;
+}
+.burgermenu .bgl1.active {
+  transform: rotate(45deg);
+  transition: 400ms;
+  margin-top: 14px;
+}
+.burgermenu .bgl2.active {
+  opacity: 0;
+}
+.burgermenu .bgl3.active {
+  transform: rotate(-45deg);
+  transition: 400ms;
+  margin-top: -14px;
+}
+
+.burgerContent {
+  display: none;
+}
+.burgerContent .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 40px;
+  color: #a1a1a1;
+}
+.burgerContent .buttons div {
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.burgerContent .buttons div:hover {
+  background-color: #131313;
+}
+.burgerContent .upgrades {
+  display: none;
+  overflow-y: auto;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+.burgerContent .upgrades::-webkit-scrollbar {
+  display: none;
+}
+.burgerContent .upgrades div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 30px 20px;
+  color: #a1a1a1;
+}
+.burgerContent .upgrades div button {
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  background-color: #ffffff;
+}
+.burgerContent .upgrades div button:hover {
+  background-color: #d4cfcf;
+  cursor: pointer;
+}
+.burgerContent .upgrades.active {
+  display: block;
+}
+.burgerContent .worlds {
+  display: none;
+}
+.burgerContent .worlds.active {
+  display: block;
+}
+
+.burgerContent.active {
+  display: block;
+}
+
+.pageWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pageWrapper .upgrades {
+  overflow-y: auto;
+  height: 100vh;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.pageWrapper .upgrades::-webkit-scrollbar {
+  display: none;
+}
+.pageWrapper .upgrades div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 30px 20px;
+  color: #a1a1a1;
+}
+.pageWrapper .upgrades div button {
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  background-color: #ffffff;
+}
+.pageWrapper .upgrades div button:hover {
+  background-color: #d4cfcf;
+  cursor: pointer;
+}
+.pageWrapper .clickerElements {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pageWrapper .clickerElements .moneyText {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #a1a1a1;
+}
+.pageWrapper .clickerElements .clickerButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: red;
+}
+.pageWrapper .worlds {
+  overflow-y: auto;
+  height: 100vh;
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.pageWrapper .worlds::-webkit-scrollbar {
+  display: none;
+}
+.pageWrapper .worlds div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 30px 20px;
+  color: #a1a1a1;
+}
+.pageWrapper .worlds div button {
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  background-color: #ffffff;
+}
+.pageWrapper .worlds div button:hover {
+  background-color: #d4cfcf;
+  cursor: pointer;
+}
+
+.pageWrapper.active {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .burgermenu {
+    display: block;
+  }
+  .pageWrapper .upgrades,
+  .idek {
+    display: none;
+  }
+  .pageWrapper {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=main.css.map */
